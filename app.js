@@ -1,10 +1,14 @@
 var http = require('http');
+var fs = require('fs');
 
 
 var server = http.createServer(function(req, res){
   console.log('request was made from: ' + req.url);
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World');
+  var myReadStream = fs.createReadStream(__dirname + '/readMe.txt','utf8');//without uf8 it will just give buffer data
+  //can only pipe from a reable stream
+  myReadStream.pipe(res);// res obj is a writeable stream
+  // res.end('Hello World');
 });
 
 //sepecify port for request

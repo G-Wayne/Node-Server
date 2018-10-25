@@ -1,0 +1,22 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "A test server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Wayne/Node-Server.git"
+  },
+  "author": "Gawayne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Wayne/Node-Server/issues"
+  },
+  "homepage": "https://github.com/G-Wayne/Node-Server#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

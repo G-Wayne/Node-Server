@@ -6,6 +6,8 @@ var app = express();
 //set ejs as view engine
 app.set('view engine', 'ejs');
 
+//use middleware
+app.use('/assets', express.static('static'));//map requests from /assets to folder assets
 //respond to get request
 app.get('/', function(req, res){
   res.render('index');

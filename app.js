@@ -18,7 +18,7 @@ app.get('/contact', function(req, res){
 //adding a dynamic route
 app.get('/profile/:name', function(req, res){
   //render view
-  var data = {age:26, job: 'Botanist'};
+  var data = {age:26, job: 'Botanist', hobbies: ['cooking', 'swiming', 'dancing', 'singing']};
   res.render('profile',{person: req.params.name, data: data});//set property person to output object of profile
 });
 

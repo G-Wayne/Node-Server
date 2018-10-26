@@ -8,11 +8,11 @@ app.set('view engine', 'ejs');
 
 //respond to get request
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+  res.render('index');
 });
 
 app.get('/contact', function(req, res){
-  res.sendFile(__dirname + '/contact.html');
+  res.render('contact');
 });
 
 //adding a dynamic route
